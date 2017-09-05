@@ -1,0 +1,488 @@
+/**
+ * Generates a set of style rules for the "navigation" tab UI.
+ */
+ 
+@include extjs-panel-ui(
+    $ui: 'thread-panel',
+    $ui-border-color:#f6f7f9,
+    $ui-header-font-weight:bold,
+    $ui-header-color: #467ead,
+    $ui-header-background-color: #f6f7f9
+);
+
+@include extjs-panel-ui(
+    $ui: 'thread-panel-sender',
+    $ui-border-color:#f4f3d7,
+    $ui-header-font-weight:bold,
+    $ui-header-color: #467ead,
+    $ui-header-background-color: #f4f3d7
+);
+
+
+.tpl_details {
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+}
+
+.x-title-icon-navigation {
+    font-family: FontAwesome;
+    color: #fff;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.x-tab-icon-el-navigation {
+    font-family: FontAwesome;
+    color: #acacac;
+
+    .x-tab-over & {
+        color: #c4c4c4;
+    }
+
+    .x-tab-active & {
+        color: #fff;
+    }
+}
+
+.x-panel-header-title-navigation > .x-title-text-navigation:after {
+    top: 30px;
+    right: -24px;
+}
+
+
+
+//UI Styles for buttons
+@include extjs-button-small-ui(
+    $ui: 'soft-menu',
+
+    $border-color: #354046,
+    $background-color:#354046,
+    $background-color-over: lighten(#354046, 10%),
+    $background-color-focus:  lighten(#354046, 10%),
+    $background-color-pressed:  lighten(#354046, 10%),
+    $background-color-focus-over:  lighten(#354046, 10%),
+    $background-color-focus-pressed:  lighten(#354046, 10%),
+    $background-color-disabled: lighten(#354046, 10%)
+
+);
+
+@include extjs-button-medium-ui(
+    $ui: 'soft-blue',
+    $background-color: $color-soft-blue,
+    $border-color: darken($color-soft-blue, 5%)
+);
+@include extjs-button-medium-ui(
+    $ui: 'soft-plain',
+    $background-color: #efefef,
+    $border-color: darken(#efefef, 5%),
+    $color:#414548
+);
+@include extjs-button-small-ui(
+    $ui: 'soft-blue',
+    $background-color: $color-soft-blue,
+    $border-color: darken($color-soft-blue, 5%)
+);
+@include extjs-button-large-ui(
+    $ui: 'soft-blue',
+    $line-height: 34px,
+    $background-color: $color-soft-blue,
+    $border-color: darken($color-soft-blue, 5%)
+);
+
+@include extjs-button-small-ui(
+    $ui: 'soft-cyan',
+    $background-color: $color-soft-cyan,
+    $border-color: darken($color-soft-cyan, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'soft-cyan',
+    $background-color: $color-soft-cyan,
+    $border-color: darken($color-soft-cyan, 5%)
+);
+
+
+@include extjs-button-small-ui(
+    $ui: 'soft-green',
+    $background-color: $color-soft-green,
+    $border-color:darken($color-soft-green, 5%)
+);
+@include extjs-button-large-ui(
+    $ui: 'soft-green',
+    $line-height: 34px,
+    $background-color: $color-soft-green,
+    $border-color:darken($color-soft-green, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'soft-green',
+    $background-color: $color-soft-green,
+    $border-color:darken($color-soft-green, 5%)
+);
+
+
+
+@include extjs-button-small-ui(
+    $ui: 'soft-dark',
+    $background-color: $color-darkblue,
+    $border-color:darken($color-darkblue, 5%)
+);
+@include extjs-button-large-ui(
+    $ui: 'soft-dark',
+    $line-height: 34px,
+    $background-color: $color-soft-green,
+    $border-color:darken($color-darkblue, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'soft-dark',
+    $background-color: $color-soft-green,
+    $border-color:darken($color-darkblue, 5%)
+);
+
+
+
+@include extjs-button-small-ui(
+    $ui: 'soft-red',
+    $background-color: $color-soft-red,
+    $border-color:darken($color-soft-red, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'soft-red',
+    $background-color: $color-soft-red,
+    $border-color:darken($color-soft-red, 5%)
+);
+
+
+@include extjs-button-small-ui(
+    $ui: 'soft-purple',
+    $background-color: $color-soft-purple,
+    $border-color:darken($color-soft-purple, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'soft-purple',
+    $background-color: $color-soft-purple,
+    $border-color:darken($color-soft-purple, 5%)
+);
+
+
+@include extjs-button-small-ui(
+    $ui: 'gray',
+    $background-color: $color-gray,
+    $border-color:darken($color-gray, 5%)
+);
+@include extjs-button-large-ui(
+    $ui: 'gray',
+    $line-height: 34px,
+    $background-color: $color-gray,
+    $border-color:darken($color-gray, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'gray',
+    $background-color: $color-gray,
+    $border-color:darken($color-gray, 5%)
+);
+
+@include extjs-button-small-ui(
+    $ui: 'green',
+    $background-color: $color-green,
+    $border-color:darken($color-green, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'green',
+    $background-color: $color-green,
+    $border-color:darken($color-green, 5%)
+);
+
+
+@include extjs-button-small-ui(
+    $ui: 'blue',
+    $background-color: $color-blue,
+    $border-color:darken($color-blue, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+    $ui: 'blue',
+    $background-color: $color-blue,
+    $border-color:darken($color-blue, 5%)
+);
+
+
+
+.fa-user{
+    color:#222d33;
+ }
+
+
+
+.logo-cls {
+    background-color: #e6e6e6;    
+    border-right:solid #e6e6e6 1px;
+    
+    height: 65px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #212223;
+    margin-left: 10px;
+
+    img{
+        width: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+    }
+    
+    .image-wrapper {
+        width: 1000px;
+        line-height: 55px;
+        margin-left: 5px;
+        margin-bottom: 15px;
+        img{
+            width: 60px;
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative;
+        }
+        p {
+            width: 500px;
+            float:'right';
+            background-color: yellow;
+        }
+    }
+}
+
+.content {
+padding: 0 0 0 75px; /* 75px being the width of the thumbnail + how much space you want to put between it and your text */
+position: relative; /* So the thumbnail is relative to this */
+}
+
+.content img {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+
+.north-toolbar {
+
+    width: 210px;
+    position: relative; 
+    background-color: #e6e6e6;
+    height: 65px;
+    font-size: 20px;
+    color: $lightest-color;
+       
+    .image-wrapper {
+        line-height: 55;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        color: #FFF;
+        text-align: right;
+        position: relative; 
+        width: 200px;
+        background: #e6e6e6;
+        background-repeat: no-repeat;
+    } 
+    .image-wrapper p {
+        position: relative; 
+        left: 0; top: 0; right:20px;
+        width: 150px;
+        color: #000504; 
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0px 0px 5px 0px; 
+    }
+}
+
+
+.al-logo {
+
+    width: 210px;
+    position: relative; 
+    background-color: #30393e;
+    height: 65px;
+    font-size: 20px;
+    color: $lightest-color;
+       
+    .image-wrapper {
+        line-height: 55px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        color: #FFF;
+        text-align: right;
+        position: relative; 
+        width: 200px;
+        background: #30393e;
+        background-repeat: no-repeat;
+    } 
+    .image-wrapper p {
+        position: relative; 
+        left: 0; top: 0; right:20px;
+        width: 150px;
+        color: #FFF; 
+        font-size: 11px;
+        margin: 10px 0px 5px 0px; 
+    }
+}
+
+
+.al-logo {
+
+    width: 210px;
+    position: relative; 
+    background-color: #30393e;
+    height: 80px;
+    font-size: 20px;
+    color: $lightest-color;
+       
+    .image-wrapper {
+        line-height: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        color: #FFF;
+        text-align: right;
+        position: relative; 
+        width: 200px;
+        background: #30393e;
+        background-repeat: no-repeat;
+    } 
+    .image-wrapper p {
+        position: relative; 
+        left: 0; top: 0; right:20px;
+        width: 150px;
+        color: #FFF; 
+        font-size: 11px;
+        margin: 10px 0px 5px 0px; 
+    }
+}
+
+#main {
+    .quick-graph-panel {
+        .x-panel-header {
+            background: $lightest-color;
+            padding: 12px;
+            .x-tool-img {
+                display: none;
+            }
+            .x-fa, .x-title-text {
+                color: $color;
+                line-height: 16px;
+                &.x-title-text {
+                    padding-left: 10px;
+                }
+            }
+            .x-title-icon-wrap {
+                height: 30px;
+                width: 30px;
+                border-radius: 15px;
+                background: #f1f1f1;
+                padding: 0;
+            }
+        }
+    }
+}
+.main-tools{
+    font-size: 18px;
+    color: #fff;
+    line-height: 15px;
+    .x-tool-img{
+        background-image: none;
+    }
+}
+
+.wrap {
+    width: 250px;
+    background: #30393e;
+    color: $lightest-color;
+    position: relative;
+}
+
+.wrap img {
+float: left;
+margin-left: 5px;
+}
+
+.wrap h2 {
+    font-family: calibri;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 50px;
+    color: $lightest-color;
+    margin-left: 20px;
+}
+
+
+.c_icon
+{
+ background-color: #FFFFFF;
+ border-radius: 50%;
+ border: 1x solid grey;
+ padding:10px 15px 10px 15px;
+float: left;
+}
+
+.sencha-logo {
+    background-color: #30393e;    
+    border-right:solid #32404e 1px;
+    
+    height: 80px;
+    font-size: 20px;
+    color: $lightest-color;
+
+    .main-logo {
+        line-height: 60px;
+        margin-left: 5px;
+        margin-bottom: 30px;
+        img{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            top: 8px;
+            position: relative;
+        }
+        p {
+            background-color: yellow;
+        }
+    }
+}
+
+.sencha-dash-dash-headerbar {
+    padding:0 0 0 0;
+    position:fixed;
+    width:100%;
+    z-index:10;
+    border:none;
+    .header-right-profile-image {
+        border-radius: 20px;
+    }
+}
+
+
+.x-btn.x-btn-soft-menu-pressed {
+    background: yellow;
+    background-color:yellow !important;
+    border:solid 1px red !important;
+}
+
+.my-btn {
+    background: #354046;
+}
+
+.my-btn.x-btn.x-btn-pressed  {
+    border-left:solid #71b1d1 7px;
+}
+
+
+.empty .x-change-cell {
+    background-color: #FFB0C4;
+    color:red;
+}
+.valid .x-change-cell {
+    background-color: #B0FFC5;
+    color:green;
+}
+.warning .x-change-cell {
+    background-color: #ffffb3;
+    color:#999900;
+}

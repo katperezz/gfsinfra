@@ -1,0 +1,68 @@
+/**
+ * Generates a set of style rules for the "navigation" tab UI.
+ */
+ @include extjs-window-ui(
+        'login-window',
+        
+        $ui-border-radius: 1px,
+        $ui-border-color: #fff,
+        $ui-inner-border-color: $window-inner-border-color,
+ 
+        $ui-body-border-color: $window-body-border-color,
+        $ui-body-background-color:  #d9d9d9,
+        $ui-body-color: #9EBF3B,
+
+        $ui-background-color:  #d9d9d9,
+        
+        $ui-header-font-size:25px,
+        $ui-header-font-weight:bold,
+        $ui-header-color:  #1a6a81,
+        $ui-header-background-color:#fff,
+        $ui-header-border-color:#fff
+    );
+
+.login {
+  position: relative;
+  background: #e6e6e6;
+  border-radius: 3px;
+}
+
+.login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+
+.login h1 {
+  line-height: 55px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  background: #2eadf5;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+@include extjs-button-small-ui(
+    $ui: 'soft-menu',
+
+    $border-color: #354046,
+    $background-color:#354046,
+    $background-color-over: lighten(#354046, 10%),
+    $background-color-focus:  lighten(#354046, 10%),
+    $background-color-pressed:  lighten(#354046, 10%),
+    $background-color-focus-over:  lighten(#354046, 10%),
+    $background-color-focus-pressed:  lighten(#354046, 10%),
+    $background-color-disabled: lighten(#354046, 10%)
+
+);
